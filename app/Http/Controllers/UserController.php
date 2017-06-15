@@ -33,7 +33,7 @@ class HomeController extends Controller {
         ]);
 
         if ($request->role == 1) {
-
+            
         }
     }
 
