@@ -15,3 +15,27 @@
 		}
 	}
 }
+
+
+.general {
+	
+	
+	$border: darken($body-bg, 15%);
+	
+	.input-group-addon {
+		color: $darkBlue;
+	}
+	
+	.input-group-addon, .form-control {
+		min-height: 50px;
+	}
+	
+	.form-control {
+		
+		&, &::placeholder{
+			color: $border;
+		}
+	
+	}
+	
+}
