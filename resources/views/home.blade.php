@@ -1,17 +1,10 @@
-@extends('layouts.app')
+@extends('layouts.front')
 
 @section('content')
-<div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">Dashboard</div>
-
-                <div class="panel-body">
-                    You are logged in!
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+	
+	@component('components.canvas')
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda exercitationem eveniet enim sint doloremque cumque quisquam molestiae nam iusto, blanditiis placeat dolores saepe tenetur repudiandae possimus sequi. Ab esse, recusandae.</p>
+	@endcomponent
+	
+	
 @endsection

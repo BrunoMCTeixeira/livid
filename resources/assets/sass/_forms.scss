@@ -1,0 +1,17 @@
+.search {
+	.input-group .form-control, .input-group-addon {
+		
+		$background : inherit;
+		
+		background    : $background;
+		border        : $background;
+		color         : $body-color;
+		box-shadow    : none;
+		padding       : 0;
+		
+		&::placeholder {
+			color    : $body-color;
+			opacity  : 0.25;
+		}
+	}
+}

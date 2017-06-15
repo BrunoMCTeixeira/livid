@@ -1,0 +1,17 @@
+header {
+	.navbar {
+		&.top {
+			min-height: 100px;
+		}
+
+
+		.user img {
+			border: 0.2rem solid white;
+		}
+	}
+
+	.search {
+		min-height: 60px;
+		background:  white;
+	}
+}
