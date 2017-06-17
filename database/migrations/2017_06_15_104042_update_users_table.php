@@ -13,23 +13,13 @@ class UpdateUsersTable extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->tinyInteger('status')->default(0);
+            $table->integer('status_id')->default(0);
             $table->string('username')->unique()->nullable();
             $table->string('lastname')->nullable();
-            $table->string('facebookid')->nullable();
-            $table->string('googleid')->nullable();
-            $table->string('gender', 1)->default('M');
-            $table->date('birthday')->nullable();
-            $table->string('photo')->nullable();
-            $table->string('cover')->nullable();
-            $table->string('from')->nullable();
-            $table->string('country_id', 2)->default('PT');
-            $table->text('description')->nullable();
-            $table->string('profession')->nullable();
-            $table->string('idioms')->nullable();
-            $table->string('website')->nullable();
-            $table->date('foundationdate')->nullable();
-            $table->string('visitedcountries')->nullable();
+            $table->string('facebook_token')->nullable();
+            $table->string('google_token')->nullable();
+            $table->string('country_id', 2)->default('PT'); 
+			$table->softDeletes();
         });
     }
 
@@ -41,23 +31,13 @@ class UpdateUsersTable extends Migration
     public function down()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->dropColumn('status');
+            $table->dropColumn('status_id');
             $table->dropColumn('username');
             $table->dropColumn('lastname');
-            $table->dropColumn('facebookid');
-            $table->dropColumn('googleid');
-            $table->dropColumn('gender');
-            $table->dropColumn('birthday');
-            $table->dropColumn('photo');
-            $table->dropColumn('cover');
-            $table->dropColumn('from');
+            $table->dropColumn('facebook_token');
+            $table->dropColumn('google_token');
             $table->dropColumn('country_id');
-            $table->dropColumn('description');
-            $table->dropColumn('profession');
-            $table->dropColumn('idioms');
-            $table->dropColumn('website');
-            $table->dropColumn('foundationdate');
-            $table->dropColumn('visitedcountries');
+			$table->dropColumn('deleted_at');
         });
     }
 }
