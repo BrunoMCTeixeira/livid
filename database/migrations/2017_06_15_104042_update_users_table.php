@@ -13,18 +13,17 @@ class UpdateUsersTable extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->tinyInteger('=status')->default(0);
-            $table->tinyInteger('role')->default(0);
-            $table->string('username')->unique();
+            $table->tinyInteger('status')->default(0);
+            $table->string('username')->unique()->nullable();
             $table->string('lastname')->nullable();
             $table->string('facebookid')->nullable();
             $table->string('googleid')->nullable();
-            $table->string('gender', 1);
-            $table->date('birthday');
+            $table->string('gender', 1)->default('M');
+            $table->date('birthday')->nullable();
             $table->string('photo')->nullable();
             $table->string('cover')->nullable();
             $table->string('from')->nullable();
-            $table->string('country_id', 2);
+            $table->string('country_id', 2)->default('PT');
             $table->text('description')->nullable();
             $table->string('profession')->nullable();
             $table->string('idioms')->nullable();
@@ -42,8 +41,7 @@ class UpdateUsersTable extends Migration
     public function down()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->dropColumn('=status');
-            $table->dropColumn('role');
+            $table->dropColumn('status');
             $table->dropColumn('username');
             $table->dropColumn('lastname');
             $table->dropColumn('facebookid');

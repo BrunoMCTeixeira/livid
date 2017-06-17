@@ -176,7 +176,9 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+		
 		Recca0120\LaravelTracy\LaravelTracyServiceProvider::class,
+		TCG\Voyager\VoyagerServiceProvider::class,
 
     ],
 
