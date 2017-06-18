@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "5a45e8717796876eed4c90a65f8c89ec",
+    "content-hash": "a3ae6f9e3c879f4e89ac411c706ffb14",
     "packages": [
         {
             "name": "arrilot/laravel-widgets",
@@ -66,6 +66,65 @@
                 "widgets"
             ],
             "time": "2017-06-06T23:00:07+00:00"
+        },
+        {
+            "name": "composer/ca-bundle",
+            "version": "1.0.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/composer/ca-bundle.git",
+                "reference": "b17e6153cb7f33c7e44eb59578dc12eee5dc8e12"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/composer/ca-bundle/zipball/b17e6153cb7f33c7e44eb59578dc12eee5dc8e12",
+                "reference": "b17e6153cb7f33c7e44eb59578dc12eee5dc8e12",
+                "shasum": ""
+            },
+            "require": {
+                "ext-openssl": "*",
+                "ext-pcre": "*",
+                "php": "^5.3.2 || ^7.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.5",
+                "psr/log": "^1.0",
+                "symfony/process": "^2.5 || ^3.0"
+            },
+            "suggest": {
+                "symfony/process": "This is necessary to reliably check whether openssl_x509_parse is vulnerable on older php versions, but can be ignored on PHP 5.5.6+"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Composer\\CaBundle\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jordi Boggiano",
+                    "email": "j.boggiano@seld.be",
+                    "homepage": "http://seld.be"
+                }
+            ],
+            "description": "Lets you find a path to the system CA bundle, and includes a fallback to the Mozilla CA bundle.",
+            "keywords": [
+                "cabundle",
+                "cacert",
+                "certificate",
+                "ssl",
+                "tls"
+            ],
+            "time": "2017-03-06T11:59:08+00:00"
         },
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -613,6 +672,171 @@
             "time": "2017-03-29T16:04:15+00:00"
         },
         {
+            "name": "geoip2/geoip2",
+            "version": "v2.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/maxmind/GeoIP2-php.git",
+                "reference": "87602e1c9f5014291b06e126847123360cb6c2db"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/maxmind/GeoIP2-php/zipball/87602e1c9f5014291b06e126847123360cb6c2db",
+                "reference": "87602e1c9f5014291b06e126847123360cb6c2db",
+                "shasum": ""
+            },
+            "require": {
+                "maxmind-db/reader": "~1.0",
+                "maxmind/web-service-common": "~0.3",
+                "php": ">=5.3.1"
+            },
+            "require-dev": {
+                "apigen/apigen": "^4.1",
+                "phpunit/phpunit": "4.2.*",
+                "squizlabs/php_codesniffer": "2.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "GeoIp2\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Gregory J. Oschwald",
+                    "email": "goschwald@maxmind.com",
+                    "homepage": "http://www.maxmind.com/"
+                }
+            ],
+            "description": "MaxMind GeoIP2 PHP API",
+            "homepage": "https://github.com/maxmind/GeoIP2-php",
+            "keywords": [
+                "IP",
+                "geoip",
+                "geoip2",
+                "geolocation",
+                "maxmind"
+            ],
+            "time": "2017-05-08T20:05:30+00:00"
+        },
+        {
+            "name": "guzzlehttp/guzzle",
+            "version": "6.2.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/guzzle/guzzle.git",
+                "reference": "8d6c6cc55186db87b7dc5009827429ba4e9dc006"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/8d6c6cc55186db87b7dc5009827429ba4e9dc006",
+                "reference": "8d6c6cc55186db87b7dc5009827429ba4e9dc006",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/promises": "^1.0",
+                "guzzlehttp/psr7": "^1.4",
+                "php": ">=5.5"
+            },
+            "require-dev": {
+                "ext-curl": "*",
+                "phpunit/phpunit": "^4.0",
+                "psr/log": "^1.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "6.2-dev"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "src/functions_include.php"
+                ],
+                "psr-4": {
+                    "GuzzleHttp\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Michael Dowling",
+                    "email": "mtdowling@gmail.com",
+                    "homepage": "https://github.com/mtdowling"
+                }
+            ],
+            "description": "Guzzle is a PHP HTTP client library",
+            "homepage": "http://guzzlephp.org/",
+            "keywords": [
+                "client",
+                "curl",
+                "framework",
+                "http",
+                "http client",
+                "rest",
+                "web service"
+            ],
+            "time": "2017-02-28T22:50:30+00:00"
+        },
+        {
+            "name": "guzzlehttp/promises",
+            "version": "v1.3.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/guzzle/promises.git",
+                "reference": "a59da6cf61d80060647ff4d3eb2c03a2bc694646"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/guzzle/promises/zipball/a59da6cf61d80060647ff4d3eb2c03a2bc694646",
+                "reference": "a59da6cf61d80060647ff4d3eb2c03a2bc694646",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.4-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "GuzzleHttp\\Promise\\": "src/"
+                },
+                "files": [
+                    "src/functions_include.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Michael Dowling",
+                    "email": "mtdowling@gmail.com",
+                    "homepage": "https://github.com/mtdowling"
+                }
+            ],
+            "description": "Guzzle promises library",
+            "keywords": [
+                "promise"
+            ],
+            "time": "2016-12-20T10:07:11+00:00"
+        },
+        {
             "name": "guzzlehttp/psr7",
             "version": "1.4.2",
             "source": {
@@ -873,16 +1097,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v5.4.26",
+            "version": "v5.4.27",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "a7ebbfab64111e24f8e584db64e2be9279ded357"
+                "reference": "66f5e1b37cbd66e730ea18850ded6dc0ad570404"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/a7ebbfab64111e24f8e584db64e2be9279ded357",
-                "reference": "a7ebbfab64111e24f8e584db64e2be9279ded357",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/66f5e1b37cbd66e730ea18850ded6dc0ad570404",
+                "reference": "66f5e1b37cbd66e730ea18850ded6dc0ad570404",
                 "shasum": ""
             },
             "require": {
@@ -998,7 +1222,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2017-06-13T18:58:49+00:00"
+            "time": "2017-06-15T19:08:25+00:00"
         },
         {
             "name": "laravel/tinker",
@@ -1145,6 +1369,105 @@
                 "storage"
             ],
             "time": "2017-04-28T10:15:08+00:00"
+        },
+        {
+            "name": "maxmind-db/reader",
+            "version": "v1.1.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/maxmind/MaxMind-DB-Reader-php.git",
+                "reference": "7eeccf61b078bb23bb07b1a151a7e5db52871e65"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/maxmind/MaxMind-DB-Reader-php/zipball/7eeccf61b078bb23bb07b1a151a7e5db52871e65",
+                "reference": "7eeccf61b078bb23bb07b1a151a7e5db52871e65",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.1"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.2.*",
+                "satooshi/php-coveralls": "1.0.*",
+                "squizlabs/php_codesniffer": "2.*"
+            },
+            "suggest": {
+                "ext-bcmath": "bcmath or gmp is requred for decoding larger integers with the pure PHP decoder",
+                "ext-gmp": "bcmath or gmp is requred for decoding larger integers with the pure PHP decoder",
+                "ext-maxminddb": "A C-based database decoder that provides significantly faster lookups"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "MaxMind\\Db\\": "src/MaxMind/Db"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Gregory J. Oschwald",
+                    "email": "goschwald@maxmind.com",
+                    "homepage": "http://www.maxmind.com/"
+                }
+            ],
+            "description": "MaxMind DB Reader API",
+            "homepage": "https://github.com/maxmind/MaxMind-DB-Reader-php",
+            "keywords": [
+                "database",
+                "geoip",
+                "geoip2",
+                "geolocation",
+                "maxmind"
+            ],
+            "time": "2017-01-19T23:49:38+00:00"
+        },
+        {
+            "name": "maxmind/web-service-common",
+            "version": "v0.3.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/maxmind/web-service-common-php.git",
+                "reference": "1fe780bcd6a9038b7e36b13fa0aeeeeca4cdb0a4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/maxmind/web-service-common-php/zipball/1fe780bcd6a9038b7e36b13fa0aeeeeca4cdb0a4",
+                "reference": "1fe780bcd6a9038b7e36b13fa0aeeeeca4cdb0a4",
+                "shasum": ""
+            },
+            "require": {
+                "composer/ca-bundle": "^1.0.3",
+                "ext-curl": "*",
+                "ext-json": "*",
+                "php": ">=5.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.*",
+                "squizlabs/php_codesniffer": "2.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "MaxMind\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Gregory Oschwald",
+                    "email": "goschwald@maxmind.com"
+                }
+            ],
+            "description": "Internal MaxMind Web Service API",
+            "homepage": "https://github.com/maxmind/mm-web-service-api-php",
+            "time": "2016-08-18T16:36:52+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -1591,6 +1914,65 @@
             "time": "2017-06-04T10:34:20+00:00"
         },
         {
+            "name": "pulkitjalan/geoip",
+            "version": "2.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pulkitjalan/geoip.git",
+                "reference": "cd30931ba53f4eca664776290563d6aa06b4ea3f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pulkitjalan/geoip/zipball/cd30931ba53f4eca664776290563d6aa06b4ea3f",
+                "reference": "cd30931ba53f4eca664776290563d6aa06b4ea3f",
+                "shasum": ""
+            },
+            "require": {
+                "geoip2/geoip2": "2.*",
+                "guzzlehttp/guzzle": "~6",
+                "illuminate/console": "~5",
+                "illuminate/support": "~5",
+                "php": ">=5.5"
+            },
+            "require-dev": {
+                "mockery/mockery": "0.9.*",
+                "phpunit/phpunit": "4.*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.5.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "PulkitJalan\\GeoIP\\": "src"
+                },
+                "files": [
+                    "helpers.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Pulkit Jalan"
+                }
+            ],
+            "description": "Geoip Wrapper with Laravel 4 & 5 Support",
+            "homepage": "https://github.com/pulkitjalan/geoip",
+            "keywords": [
+                "freegeoip",
+                "geoip",
+                "ip-api",
+                "maxmind",
+                "telize"
+            ],
+            "time": "2017-01-26T08:14:24+00:00"
+        },
+        {
             "name": "ramsey/uuid",
             "version": "3.6.1",
             "source": {
@@ -1674,16 +2056,16 @@
         },
         {
             "name": "recca0120/laravel-tracy",
-            "version": "v1.8.5",
+            "version": "v1.8.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/recca0120/laravel-tracy.git",
-                "reference": "141ee41f6cc36f4cdc95163b66e6edf015a151bb"
+                "reference": "cb94756ec22e3a59d8f245b82d67fee477db3bd5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/recca0120/laravel-tracy/zipball/141ee41f6cc36f4cdc95163b66e6edf015a151bb",
-                "reference": "141ee41f6cc36f4cdc95163b66e6edf015a151bb",
+                "url": "https://api.github.com/repos/recca0120/laravel-tracy/zipball/cb94756ec22e3a59d8f245b82d67fee477db3bd5",
+                "reference": "cb94756ec22e3a59d8f245b82d67fee477db3bd5",
                 "shasum": ""
             },
             "require": {
@@ -1700,12 +2082,12 @@
             "require-dev": {
                 "mockery/mockery": "~0.9.4",
                 "nesbot/carbon": "~1.20",
-                "phpunit/phpunit": "~4.8|~5.4"
+                "phpunit/phpunit": "~4.8|~5.4|~6.1"
             },
             "type": "library",
             "autoload": {
                 "files": [
-                    "src/helpers.php"
+                    "src/polyfill.php"
                 ],
                 "psr-4": {
                     "Recca0120\\LaravelTracy\\": "src/"
@@ -1733,20 +2115,20 @@
                 "tracy",
                 "webprofiler"
             ],
-            "time": "2017-03-08T07:27:54+00:00"
+            "time": "2017-06-16T18:32:22+00:00"
         },
         {
             "name": "recca0120/terminal",
-            "version": "v1.6.11",
+            "version": "v1.6.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/recca0120/laravel-terminal.git",
-                "reference": "cbb017f8e950642ac8b46e9521d42582e2222ffa"
+                "reference": "a2865c5fc83be67d8b5be8df7bd9efe595a81c04"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/recca0120/laravel-terminal/zipball/cbb017f8e950642ac8b46e9521d42582e2222ffa",
-                "reference": "cbb017f8e950642ac8b46e9521d42582e2222ffa",
+                "url": "https://api.github.com/repos/recca0120/laravel-terminal/zipball/a2865c5fc83be67d8b5be8df7bd9efe595a81c04",
+                "reference": "a2865c5fc83be67d8b5be8df7bd9efe595a81c04",
                 "shasum": ""
             },
             "require": {
@@ -1793,7 +2175,7 @@
                 "web",
                 "web artisan"
             ],
-            "time": "2017-05-31T14:14:28+00:00"
+            "time": "2017-06-16T18:33:11+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -2702,6 +3084,71 @@
             "time": "2016-09-20T12:50:39+00:00"
         },
         {
+            "name": "torann/geoip",
+            "version": "1.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Torann/laravel-geoip.git",
+                "reference": "c6984de76fb31f85877fb5276f065bd65d0aaadc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Torann/laravel-geoip/zipball/c6984de76fb31f85877fb5276f065bd65d0aaadc",
+                "reference": "c6984de76fb31f85877fb5276f065bd65d0aaadc",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/console": "~5.0",
+                "illuminate/support": "~5.0",
+                "php": ">=5.5.9"
+            },
+            "require-dev": {
+                "geoip2/geoip2": "~2.1",
+                "mockery/mockery": "^0.9.4",
+                "phpunit/phpunit": "^4.8"
+            },
+            "suggest": {
+                "geoip2/geoip2": "Required to use the MaxMind database or web service with GeoIP (~2.1).",
+                "monolog/monolog": "Allows for storing location not found errors to the log"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "src/helpers.php"
+                ],
+                "psr-4": {
+                    "Torann\\GeoIP\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD 2-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Daniel Stainback",
+                    "email": "torann@gmail.com"
+                }
+            ],
+            "description": "Support for multiple GeoIP services.",
+            "keywords": [
+                "IP API",
+                "geoip",
+                "geolocation",
+                "infoDB",
+                "laravel",
+                "laravel 5",
+                "location",
+                "maxmind"
+            ],
+            "time": "2017-01-26T17:27:25+00:00"
+        },
+        {
             "name": "tracy/tracy",
             "version": "v2.4.7",
             "source": {
@@ -3152,7 +3599,7 @@
                 "generators",
                 "laravel"
             ],
-            "time": "2017-01-25T15:31:26+00:00"
+            "time": "2017-01-25 15:31:26"
         },
         {
             "name": "mockery/mockery",
