@@ -204,5 +204,6 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'GeoIP' => Torann\GeoIP\GeoIPFacade::class,
+        'Socialite' => Laravel\Socialite\Facades\Socialite::class,
     ],
 ];
