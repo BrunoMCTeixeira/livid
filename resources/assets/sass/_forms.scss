@@ -1,0 +1,9 @@
+form {
+	.input-group-addon {
+		min-width: 3rem;
+	}
+	
+	.form-control::placeholder {
+		text-transform: capitalize;
+	}
+}

@@ -37,7 +37,7 @@ class LoginController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('guest')->except('logout');
+        //$this->middleware('guest')->except('logout');
     }
 	
 	protected $redirectTo = '/';
@@ -60,6 +60,13 @@ class LoginController extends Controller
      *
      * @return Response
      */
+	
+	public function show()
+	{
+		return view('features.users.sign-in.index');
+	}
+	
+	
     public function handleProviderCallback($provider)
     {
         $user     = Socialite::driver($provider)->stateless()->user();
