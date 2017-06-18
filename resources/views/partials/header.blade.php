@@ -1,5 +1,5 @@
 <header class="mb-5">
-	<nav class="navbar top navbar-toggleable-md navbar-light bg-primary">
+	<nav class="navbar top navbar-toggleable-md navbar-light">
   <div class="container">
   	<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 		<span class="navbar-toggler-icon"></span>
@@ -49,19 +49,4 @@
 	  </div>
   </div>
 </nav>
-	<div class="search d-flex align-items-center">
-		
-		<div class="container ">
-			<div class="row">
-				<div class="col">
-					<div class="input-group">
-						<input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Pesquisa na Livid estadias, viagens ou amigos">
-						
-						<div class="input-group-addon"><i class="fa fa-search"></i></div>
-					</div>
-				</div>
-			</div>
-		</div>
-		
-	</div>
 </header>
