@@ -3716,7 +3716,7 @@
                 "generators",
                 "laravel"
             ],
-            "time": "2017-01-25T15:31:26+00:00"
+            "time": "2017-01-25 15:31:26"
         },
         {
             "name": "mockery/mockery",
