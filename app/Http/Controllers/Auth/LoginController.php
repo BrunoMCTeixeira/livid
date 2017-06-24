@@ -3,11 +3,11 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Repositories\Contracts\UserRepositoryInterface;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
 use Auth;
 use Socialite;
-use App\User;
 
 class LoginController extends Controller
 {
@@ -29,23 +29,25 @@ class LoginController extends Controller
      *
      * @var string
      */
+	protected $redirectTo = '/';
+	
 
     /**
      * Create a new controller instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct(UserRepositoryInterface $user)
     {
-        //$this->middleware('guest')->except('logout');
+		$this->user = $user;	
+        $this->middleware('guest')->except('logout');
     }
 	
-	protected $redirectTo = '/';
 	
 	public function redirectToProvider($provider)
     {
 		
-		$facebook = ['first_name', 'last_name', 'email', 'gender', 'birthday', 'user_location', 'public_profile'];
+		$facebook = ['first_name', 'last_name', 'email', 'gender', 'user_birthday', 'user_location', 'public_profile'];
 		$google   = ['first_name', 'last_name', 'email', 'gender', 'birthday'];
 		$fields   = ($provider == 'facebook') ? $facebook : $google;
 		
@@ -70,11 +72,14 @@ class LoginController extends Controller
     public function handleProviderCallback($provider)
     {
         $user     = Socialite::driver($provider)->stateless()->user();
-        $authUser = $this->findOrCreateUser($user, $provider);
+        $authUser = $this->findUser($user, $provider);
        
-		Auth::login($authUser);
-        
-		return redirect($this->redirectTo);	
+		if($authUser):
+			Auth::login($authUser);
+			return redirect($this->redirectTo);	
+		endif;
+		
+		return redirect()->route('signup');
     }
 
     /**
@@ -84,29 +89,31 @@ class LoginController extends Controller
      * @param $provider Social auth provider
      * @return  User
      */
-    public function findOrCreateUser($user, $provider)
+    public function findUser($user, $provider)
     {	
-		$authUser = User::where($provider . '_token', $user->id)->first();
+		$emailUser = $this->user->findByField('email', $user->email);
+		
+		if($emailUser):			
+			$this->user->update([ $provider . '_token' => $user->id], $emailUser);
+
+			return $emailUser;
+		endif;
+		
+		$authUser = $this->user->findByField($provider . '_token', $user->id);
         
-		if ($authUser) { return $authUser; }
+		if ($authUser):
+			return $authUser;
+		endif;
 		
-		// User creation	
-		$fullName   = explode(' ', $user->name);
-		$firstName  = $fullName[0];
-		$provider  .= '_token';
+		$name = explode(' ', $user->name);
 		
-		$user = new User;
+		$userInformation = [
+			'name'               => $name[0],
+			'lastname'           => end($name),
+			'email'              => $user->email,
+			$provider . '_token' => $user->id
+		];
 		
-		$user->name        = $firstName;
-		$user->lastname    = end($fullName);
-		$user->email       = $user->email;
-		$user->password    = bcrypt('teste');
-		$user->$provider   = $user->id;
-		$user->username    = $firstName . $lastName . str_random(5);
-		$user->country_id  = 'PT';
-		
-		$user->save();
-		
-		return $user;
+		session([ 'user_signup' => $userInformation ]);
     }
 }

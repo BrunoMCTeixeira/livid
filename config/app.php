@@ -157,6 +157,7 @@ return [
         Recca0120\LaravelTracy\LaravelTracyServiceProvider::class,
         TCG\Voyager\VoyagerServiceProvider::class,
         Torann\GeoIP\GeoIPServiceProvider::class,
+		Laravel\Socialite\SocialiteServiceProvider::class,
     ],
     /*
       |--------------------------------------------------------------------------

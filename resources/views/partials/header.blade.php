@@ -14,36 +14,50 @@
 					<div>Ajuda </div>
 				</a>
 			</li>
+			
+			<li class="nav-item ml-3 darkerBlue">
+				<a class="nav-link" href="/auth">
+					Login
+				</a>
+			</li>
 
-			<li class="nav-item dropdown">
-				<a class="nav-link user dropdown-toggle white mx-4 d-flex align-items-center" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-				  <img src="http://via.placeholder.com/50x50" class="rounded-circle mr-2" alt="">
-				  <div>Bruno</div>
-				</a>
-				<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-				  <a class="dropdown-item" href="#">Action</a>
-				  <a class="dropdown-item" href="#">Another action</a>
-				  <a class="dropdown-item" href="#">Something else here</a>
-				</div>
-			  </li>
-			  
-		    <li class="nav-item darkerBlue">
-				<a class="nav-link" href="#">
-					<i class="fa fa-lg fa-envelope"></i>
-				</a>
-			</li>
-			
-			<li class="nav-item darkerBlue">
-				<a class="nav-link" href="#">
-					<i class="fa fa-lg fa-user-plus"></i>
-				</a>
-			</li>
-			
-			<li class="nav-item darkerBlue">
-				<a class="nav-link" href="#">
-					<i class="fa fa-lg fa-exclamation-circle"></i>
-				</a>
-			</li>
+			@if(Auth::user())
+				<li class="nav-item dropdown">
+					<a class="nav-link user dropdown-toggle white mx-4 d-flex align-items-center" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					  <img src="http://via.placeholder.com/50x50" class="rounded-circle mr-2" alt="">
+					  <div>@ {{ Auth::user()->username }}</div>
+					</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+					  <a class="dropdown-item" href="#">Action</a>
+					  <a class="dropdown-item" href="#">Another action</a>
+					  <a class="dropdown-item" href="#">Something else here</a>
+					</div>
+				</li>
+
+				<li class="nav-item darkerBlue">
+					<a class="nav-link" href="#">
+						<i class="fa fa-lg fa-envelope"></i>
+					</a>
+				</li>
+
+				<li class="nav-item darkerBlue">
+					<a class="nav-link" href="#">
+						<i class="fa fa-lg fa-user-plus"></i>
+					</a>
+				</li>
+
+				<li class="nav-item darkerBlue">
+					<a class="nav-link" href="#">
+						<i class="fa fa-lg fa-exclamation-circle"></i>
+					</a>
+				</li>
+				
+				<li class="nav-item ml-3 darkerBlue">
+					<a class="nav-link" href="/auth/logout">
+						Sair
+					</a>
+				</li>
+			@endif
 		</ul>
 		
 	  </div>

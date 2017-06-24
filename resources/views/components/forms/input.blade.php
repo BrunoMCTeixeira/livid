@@ -3,7 +3,7 @@
 		<label for="{{ $inputName }}">{{ $label }}</label>
 	@endif
 	<div class="input-group">
-		<input type="{{ $inputType or 'text' }}" class="form-control form-control-lg" id="{{ $inputName}}" placeholder="{{ $inputPlaceholder or $inputName}}" required>
+		<input type="{{ $inputType or 'text' }}" class="form-control form-control-lg" id="{{ $inputName}}" name="{{ $inputName }}" placeholder="{{ $inputPlaceholder or $inputName}}" value="{{ $inputValue or old($inputName) }}"  {{ isset($inputState) ? 'disabled' : null }} required>
 		
 		@if(isset($addon))
 			<div class="input-group-addon">

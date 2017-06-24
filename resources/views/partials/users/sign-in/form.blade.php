@@ -17,7 +17,7 @@
 			</div>
 		</div>
 
-		<hr class="my-3">
+		<hr class="my-4">
 
 		<div class="row">
 			<div class="col">
