@@ -30,3 +30,4 @@ class UserSignupRequest extends FormRequest
         ];
     }
 }
+

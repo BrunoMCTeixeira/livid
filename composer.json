@@ -6,13 +6,16 @@
     "type": "project",
     "require": {
         "php": ">=5.6.4",
+        "hootlex/laravel-friendships": "^1.0",
+        "lab404/laravel-impersonate": "^1.1",
+        "laracasts/presenter": "^0.2.1",
         "laravel/framework": "5.4.*",
         "laravel/socialite": "^3.0",
         "laravel/tinker": "~1.0",
         "pulkitjalan/geoip": "^2.5",
         "recca0120/laravel-tracy": "^1.8",
         "tcg/voyager": "^0.11.12",
-		"torann/geoip": "^1.0.3"
+        "torann/geoip": "^1.0.3"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

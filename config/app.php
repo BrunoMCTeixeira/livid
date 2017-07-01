@@ -146,6 +146,12 @@ return [
          * Package Service Providers...
          */
         Laravel\Tinker\TinkerServiceProvider::class,
+		Hootlex\Friendships\FriendshipsServiceProvider::class,
+        Recca0120\LaravelTracy\LaravelTracyServiceProvider::class,
+        TCG\Voyager\VoyagerServiceProvider::class,
+        Torann\GeoIP\GeoIPServiceProvider::class,
+		Laravel\Socialite\SocialiteServiceProvider::class,
+		Lab404\Impersonate\ImpersonateServiceProvider::class,
         /*
          * Application Service Providers...
          */
@@ -154,10 +160,6 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-        Recca0120\LaravelTracy\LaravelTracyServiceProvider::class,
-        TCG\Voyager\VoyagerServiceProvider::class,
-        Torann\GeoIP\GeoIPServiceProvider::class,
-		Laravel\Socialite\SocialiteServiceProvider::class,
     ],
     /*
       |--------------------------------------------------------------------------

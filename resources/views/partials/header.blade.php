@@ -28,9 +28,9 @@
 					  <div>@ {{ Auth::user()->username }}</div>
 					</a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-					  <a class="dropdown-item" href="#">Action</a>
-					  <a class="dropdown-item" href="#">Another action</a>
-					  <a class="dropdown-item" href="#">Something else here</a>
+					  <a class="dropdown-item" href="{{ route('impersonate', 14) }}">Impersonate user 14</a>
+					  <a class="dropdown-item" href="{{ route('impersonate', 15) }}">Impersonate user 15</a>
+					  <a class="dropdown-item" href="{{ route('impersonate.leave') }}">Leave impersonate</a>
 					</div>
 				</li>
 

@@ -4,10 +4,15 @@ namespace App;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Hootlex\Friendships\Traits\Friendable;
+use Lab404\Impersonate\Models\Impersonate;
+use Laracasts\Presenter\PresentableTrait;
 
 class User extends Authenticatable
 {
-    use Notifiable;
+    use Notifiable, Friendable, Impersonate, PresentableTrait;
+
+    protected $presenter = 'App\Http\Presenter\UserPresenter';
 
     /**
      * The attributes that are mass assignable.

@@ -25,6 +25,8 @@ Route::get('/', function () {
 
 Auth::routes();
 
+Route::impersonate();
+
 Route::group(['prefix' => 'auth'], function () {
     Route::get('/', 'Auth\LoginController@show');
 	Route::get('logout', function (){
@@ -39,4 +41,14 @@ Route::group(['prefix' => 'auth'], function () {
 Route::group(['prefix' => 'signup'], function () {
 	Route::get('/', 'Auth\RegisterController@create')->name('signup');
 	Route::post('/', 'Auth\RegisterController@store');
+});
+
+Route::group(['prefix' => 'friends'], function () {
+	//Route::get('/', 'FriendsController@index');
+	
+	Route::get('/requests', 'FriendshipsController@index');
+	Route::get('/requests/create/{user}', 'FriendshipsController@create');
+	Route::post('/requests', 'FriendshipsController@store')->name('friends.accept');
+	Route::delete('/requests/{user}', 'FriendshipsController@destroy')->name('friends.reject');
+	
 });
